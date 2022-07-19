@@ -1,0 +1,18 @@
+[package]
+name = "trasaction-processor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_derive = "1"
+derive_more = "0.99.17"
+csv = "1.1.6"
+rust_decimal = { version = "1.25", features = ["serde-str"] }
+rust_decimal_macros = "1.25"
+anyhow = "1.0.58"
+structopt = "0.3"
+thiserror = "1.0.30"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json", "time"] }
+dotenv = "0.15"
