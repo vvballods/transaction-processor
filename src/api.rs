@@ -19,12 +19,12 @@ pub enum ProcessingError {
         id: TransactionId,
         client_id: ClientId,
     },
-    #[error("Account with id {id} has insufficient available funds")]
-    AccountInsufficientAvailableFunds { id: ClientId },
-    #[error("Account with id {id} has insufficient held funds")]
-    AccountInsufficientHeldFunds { id: ClientId },
-    #[error("Account with id {id} is locked")]
-    AccountIsLocked { id: ClientId },
+    #[error("Client {client_id} account has insufficient available funds")]
+    AccountInsufficientAvailableFunds { client_id: ClientId },
+    #[error("Client {client_id} account has insufficient held funds")]
+    AccountInsufficientHeldFunds { client_id: ClientId },
+    #[error("Client {client_id} account is locked")]
+    AccountIsLocked { client_id: ClientId },
     #[error("Unknown error: {0}")]
     UnknownError(String),
 }
